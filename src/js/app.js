@@ -1,5 +1,4 @@
 const windows = document.querySelectorAll(".window");
-window.win = windows;
 document.addEventListener("DOMContentLoaded", () => {
   const headChange = setInterval(() => {
     if (document.querySelector(".head")) {
