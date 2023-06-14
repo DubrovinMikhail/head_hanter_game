@@ -1,0 +1,18 @@
+.main {
+  width: 600px;
+  margin: auto;
+  background-color: #40e0d0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.window {
+  width: 120px;
+  height: 120px;
+  background-color: #2d2d2d;
+  margin: 15px;
+}
+
+.head {
+  background-image: url(img/goblin.png);
+}
