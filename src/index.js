@@ -1,4 +1,4 @@
-import "./css/style.css"
+import "./css/style.css";
 import HeadHanter from "./js/HeadHanter.js";
 const windows = document.querySelectorAll(".window");
 document.addEventListener("DOMContentLoaded", () => {
