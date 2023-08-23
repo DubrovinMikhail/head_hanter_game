@@ -1,4 +1,9 @@
-.main {
+
+body {
+  cursor: none;
+}
+
+.table {
   width: 600px;
   margin: auto;
   background-color: #40e0d0;
@@ -6,13 +11,13 @@
   flex-wrap: wrap;
 }
 
-.window {
+.cell {
   width: 120px;
   height: 120px;
   background-color: #2d2d2d;
   margin: 15px;
 }
 
-.head {
+.active {
   background-image: url(../img/goblin.png);
 }
