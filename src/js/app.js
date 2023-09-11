@@ -1,5 +1,4 @@
 import "../css/style.css";
-import { Cursor } from "../components/cursor/cursor";
 
 const table = document.querySelector(".table");
 const cells = table.children;
@@ -41,20 +40,3 @@ const headClick = ({target}) => {
 }
 
 table.addEventListener('click', headClick);
-
-const cursor = new Cursor(".cursor")
-document.addEventListener('mousedown', cursor.mouseBtnDown())
-document.addEventListener('mouseup', cursor.mouseBtnUp())
-
-// const cursor = document.querySelector(".cursor")
-// const mouseMove = (element) => {
-//   let x = element.clientX;
-//   let y = element.clientY;
-//   cursor.style.left = x + "px";
-//   cursor.style.top = y + "px";
-// };
-
-// document.addEventListener('mousemove', mouseMove);
-
-// document.addEventListener('mousedown', () => {cursor.children[0].classList.add("cursorDown")})
-// document.addEventListener('mouseup', () => {cursor.children[0].classList.remove("cursorDown")})
