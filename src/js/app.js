@@ -1,31 +1,24 @@
 import "../css/style.css";
+import { HeadHunter } from "../components/headHanterGame/headHanterGame";
 
-const table = document.querySelector(".table");
-const cells = table.children;
-const countField = document.querySelector(".count");
-
-const getRandom = () => Math.floor(1 + Math.random() * 15);
+const table = new HeadHunter(".table")
 
 let countStep = 0;
 let countClick = 0
-let lastTarget = getRandom();
-
-const removeActiveByIndex = (index) => cells[index].classList.remove("active");
-const appendActiveByIndex = (index) => cells[index].classList.add("active");
-
+let lastTarget = HeadHunter.getRandom();
 
 const headChange = () => {
-      removeActiveByIndex(lastTarget);
-      lastTarget = getRandom();
-      appendActiveByIndex(lastTarget);
-      countField.textContent =  `количество пропусков: ${countStep - countClick}`;
-      countStep += 1;
-      if (countStep < countClick + 6) {
-        timeout = setTimeout(headChange, 1000);
-      } else {
-        table.removeEventListener('click', headClick);
-        countField.textContent = 'Стоп игра. Вы проиграли'
-      }
+  table.removeActiveByIndex(lastTarget);
+  lastTarget = HeadHunter.getRandom();
+  table.appendActiveByIndex(lastTarget);
+  table.countField.textContent =  `количество пропусков: ${countStep - countClick}`;
+  countStep += 1;
+    if (countStep < countClick + 6) {
+      timeout = setTimeout(headChange, 1000);
+    } else {
+      table.cells[0].parentNode.removeEventListener('click', headClick);
+      table.countField.textContent = 'Стоп игра. Вы проиграли'
+    }
 };
 
 let timeout = setTimeout(headChange, 1000);
@@ -39,4 +32,4 @@ const headClick = ({target}) => {
   };
 }
 
-table.addEventListener('click', headClick);
+table.cells[0].parentNode.addEventListener('click', headClick);

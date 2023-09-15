@@ -4,11 +4,11 @@
   background-color: #40e0d0;
   display: flex;
   flex-wrap: wrap;
-  cursor: url('../img/hammer.png'), pointer;
+  cursor: url('../../img/hammer.png'), pointer;
 }
 
 .table:active {
-  cursor: url('../img/hammer_active.png'), pointer;
+  cursor: url('../../img/hammer_active.png'), pointer;
 }
 
 .cell {
@@ -19,5 +19,6 @@
 }
 
 .active {
-  background-image: url(../img/goblin.png);
+  background-image: url(../../img/goblin.png);
 }
+
